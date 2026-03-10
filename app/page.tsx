@@ -52,9 +52,18 @@
  * }
  * ```
  */
+import Image from "next/image"
+
 export default function HomePage() {
   return (
     <div className="flex min-h-[60vh] flex-col items-center justify-center px-4 text-center">
+      <Image
+        src="/uploads/logo_construction.png"
+        alt="Construction worker robot"
+        width={240}
+        height={300}
+        className="mb-6"
+      />
       <h1 className="text-4xl font-bold tracking-tight text-balance">
         Home Page Under Construction
       </h1>
