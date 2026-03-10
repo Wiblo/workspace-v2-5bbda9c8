@@ -56,21 +56,62 @@ import Image from "next/image"
 
 export default function HomePage() {
   return (
-    <div className="flex min-h-[60vh] flex-col items-center justify-center px-4 text-center">
-      <Image
-        src="/uploads/logo_construction.png"
-        alt="Construction worker robot"
-        width={240}
-        height={300}
-        className="mb-6"
-      />
-      <h1 className="text-4xl font-bold tracking-tight text-balance">
-        Home Page Under Construction
-      </h1>
-      <p className="mt-4 max-w-md text-lg text-muted-foreground">
-        This page is being customized for your business. Ask the AI to build
-        your home page with your brand and content.
-      </p>
-    </div>
+    <main className="min-h-dvh flex items-center justify-center px-6 py-20">
+      <div className="w-full max-w-lg mx-auto flex flex-col items-center gap-10 text-center">
+
+        {/* Status badge */}
+        <div className="animate-in fade-in slide-in-from-top-3 duration-500 fill-mode-backwards">
+          <span className="inline-flex items-center gap-2 border border-border border-dashed rounded-full px-4 py-1.5 text-sm font-medium text-muted-foreground">
+            <span className="size-2 rounded-full bg-primary animate-pulse" />
+            Building something great
+          </span>
+        </div>
+
+        {/* Robot mascot with decorative rings */}
+        <div
+          className="animate-in fade-in zoom-in-90 duration-500 [animation-delay:120ms] [animation-fill-mode:backwards] relative flex items-center justify-center"
+        >
+          {/* Outer dashed decorative ring */}
+          <div className="absolute size-72 rounded-full border-2 border-dashed border-border" />
+          {/* Middle solid ring */}
+          <div className="absolute size-60 rounded-full border border-border bg-muted/40" />
+          {/* Inner circle */}
+          <div className="relative size-52 rounded-full bg-muted flex items-center justify-center">
+            <Image
+              src="/uploads/logo_construction.png"
+              alt="Friendly construction worker robot mascot"
+              width={220}
+              height={275}
+              className="w-44 h-auto object-contain relative z-10"
+              priority
+            />
+          </div>
+        </div>
+
+        {/* Text content */}
+        <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 [animation-delay:240ms] [animation-fill-mode:backwards] flex flex-col items-center gap-4">
+          <h1 className="text-5xl sm:text-6xl font-bold text-balance leading-[1.1]">
+            Home Page{" "}
+            <span className="text-primary">Under Construction</span>
+          </h1>
+          <p className="text-lg text-muted-foreground text-pretty max-w-sm leading-relaxed">
+            This page is being customized for your business. Ask the AI to build
+            your home page with your brand and content.
+          </p>
+        </div>
+
+        {/* Decorative divider dots */}
+        <div
+          className="animate-in fade-in duration-500 [animation-delay:360ms] [animation-fill-mode:backwards] flex items-center gap-2"
+        >
+          <span className="size-1.5 rounded-full bg-border" />
+          <span className="size-1.5 rounded-full bg-primary/40" />
+          <span className="size-1.5 rounded-full bg-primary" />
+          <span className="size-1.5 rounded-full bg-primary/40" />
+          <span className="size-1.5 rounded-full bg-border" />
+        </div>
+
+      </div>
+    </main>
   )
 }
